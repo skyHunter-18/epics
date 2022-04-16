@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPICS</title>
+</head>
+<body>
+    <h1>Negar Seva</h1>
+    <table>
+
+        <thead>
+            <tr>
+                <!-- Your Columns HERE -->
+                <th scope="col">Address</th>
+                <th scope="col">Date</th>
+                <th scope="col">Image Link</th>
+                <th scope="col">Mobile</th>
+                <th scope="col">Name</th>
+                <th scope="col">Pincode</th>
+                <th scope="col">Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                {% for data in db.child("user_complaint").child().get(): %}
+                {% for k,v in data.val().items() %}
+                    <td>{{ v }}</td>
+                        
+                {% endfor %}
+
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
