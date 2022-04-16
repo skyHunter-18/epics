@@ -77,3 +77,7 @@ def login_page():
             flash(f'Please check your credentials and try again', category='danger')
             print("invalid")
     return render_template("login.html", form=form)
+
+
+if __name__ == "__main__":
+    app.run()
