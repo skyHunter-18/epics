@@ -6,7 +6,7 @@ Nagar Seva
 
 {% block content %}
 <!-- ======= Hero Section ======= -->
-<section id="hero" class="d-flex align-items-center" style="background-color: #00FA9A;">
+<section id="hero" class="d-flex align-items-center">
 
     <div class="container">
         <div class="row">
@@ -37,34 +37,34 @@ Nagar Seva
         <div class="container" data-aos="fade-up">
 
             <div class="section-title">
-                <h2>About Us</h2>
+                <h2>Our Aim</h2>
             </div>
 
+            <div class="row content ">
+                <div class="col-lg-6 d-flex align-items-center">
+                    <p>Waste management and disposal has widely become a major issue in India. The municipal bodies in most districts even with their best efforts sometimes is not able to clean up and manage all the garbage in various areas of a city.
+                        <br>
+                        Our project , titled - "Nagar seva" is an android application is our attempt to solve this problem.
+                    </p>
+                </div>
+                <!-- <div class="col-lg-6 pt-4 pt-lg-0">
+                    <img src="" height="">
+                </div> -->
+                <div class="col-lg-6">
+                    <img src="{{ url_for('static', filename='assets/img/garbage-truck-men.png') }}" width="100%" height="100%"
+                        alt="">
+                </div>
+            </div>
+            
             <div class="row content">
                 <div class="col-lg-6">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore
-                        magna aliqua.
-                    </p>
-                    <ul>
-                        <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat
-                        </li>
-                        <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate
-                            velit</li>
-                        <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat
-                        </li>
-                    </ul>
+                    <img src="{{ url_for('static', filename='assets/img/garbage-men.png') }}" width="70%" height="90%"
+                        alt="">
                 </div>
-                <div class="col-lg-6 pt-4 pt-lg-0">
+                <div class="col-lg-6 pt-4 pt-lg-0 d-flex align-items-center">
                     <p>
-                        Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-                        in voluptate
-                        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in
-                        culpa qui officia deserunt mollit anim id est laborum.
+                        This application will  provide a transparent and open complaint-redressal solution for the residents of a community and the nagar-nigam or municipal corporation of their localities. By using the app,  residents of a particular area will be able to report garbage that has been neglected in their locality to the municipal corporation, so that the garbage can be correctly disposed.​
                     </p>
-                    <a href="#" class="btn-learn-more">Learn More</a>
                 </div>
             </div>
 
@@ -73,7 +73,7 @@ Nagar Seva
     <!-- End About Us Section -->
 
     <!-- ======= Why Us Section ======= -->
-    <section id="why-us" class="why-us section-bg">
+    <!-- <section id="why-us" class="why-us section-bg">
         <div class="container-fluid" data-aos="fade-up">
 
             <div class="row">
@@ -143,11 +143,12 @@ Nagar Seva
             </div>
 
         </div>
-    </section><!-- End Why Us Section -->
+    </section> -->
+    <!-- End Why Us Section -->
 
 
     <!-- ======= Services Section ======= -->
-    <section id="services" class="services section-bg">
+    <!-- <section id="services" class="services section-bg">
         <div class="container" data-aos="fade-up">
 
             <div class="section-title">
@@ -196,7 +197,8 @@ Nagar Seva
             </div>
 
         </div>
-    </section><!-- End Services Section -->
+    </section> -->
+    <!-- End Services Section -->
 
 
     <!-- ======= Team Section ======= -->
@@ -205,22 +207,19 @@ Nagar Seva
 
             <div class="section-title">
                 <h2>Team</h2>
-                <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-                    consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
-                    fugiat sit in iste officiis commodi quidem hic quas.</p>
+                <p>We are the students of VIT Bhopal University.</p>
             </div>
 
             <div class="row">
 
-                <div class="col-lg-6">
-                    <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="pic"><img
-                                src="{{ url_for('static', filename='assets/img/team/Tushar_Gupta_VIT.jpg') }}"
+                <div class="col-lg-6 mt-4">
+                    <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="pic"><img src="{{ url_for('static', filename='assets/img/team/tushar_gupta.png') }}"
                                 class="img-fluid" alt=""></div>
                         <div class="member-info">
                             <h4>Tushar Gupta</h4>
                             <span>19BCY10019</span>
-                            <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
+                            <p>Lead Web Developer</p>
                             <div class="social">
                                 <a href=""><i class="ri-twitter-fill"></i></a>
                                 <a href=""><i class="ri-facebook-fill"></i></a>
@@ -230,15 +229,15 @@ Nagar Seva
                         </div>
                     </div>
                 </div>
-
-                <div class="col-lg-6 mt-4 mt-lg-0">
-                    <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="pic"><img src="{{ url_for('static', filename='assets/img/team/team-2.jpg') }}"
+                
+                <div class="col-lg-6 mt-4">
+                    <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="pic"><img src="{{ url_for('static', filename='assets/img/team/gopali_singh.png') }}"
                                 class="img-fluid" alt=""></div>
                         <div class="member-info">
                             <h4>Gopali Singh</h4>
                             <span>19BCE10022</span>
-                            <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>
+                            <p>Lead Android Developer</p>
                             <div class="social">
                                 <a href=""><i class="ri-twitter-fill"></i></a>
                                 <a href=""><i class="ri-facebook-fill"></i></a>
@@ -248,33 +247,14 @@ Nagar Seva
                         </div>
                     </div>
                 </div>
-
-                <div class="col-lg-6 mt-4">
-                    <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="300">
-                        <div class="pic"><img src="{{ url_for('static', filename='assets/img/team/team-3.jpg') }}"
-                                class="img-fluid" alt=""></div>
-                        <div class="member-info">
-                            <h4>Mayank Kumar Shrivastava</h4>
-                            <span>19BCG10016</span>
-                            <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
-                            <div class="social">
-                                <a href=""><i class="ri-twitter-fill"></i></a>
-                                <a href=""><i class="ri-facebook-fill"></i></a>
-                                <a href=""><i class="ri-instagram-fill"></i></a>
-                                <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
                 <div class="col-lg-6 mt-4">
                     <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
-                        <div class="pic"><img src="{{ url_for('static', filename='assets/img/team/team-4.jpg') }}"
+                        <div class="pic"><img src="{{ url_for('static', filename='assets/img/team/mayank_kumar.png') }}"
                                 class="img-fluid" alt=""></div>
                         <div class="member-info">
-                            <h4>Rahul Bhardawaj</h4>
-                            <span>19BAI10105</span>
-                            <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>
+                            <h4>Mayank Kumar Srivastava</h4>
+                            <span>19BCG10016</span>
+                            <p>UI/UX Designer</p>
                             <div class="social">
                                 <a href=""><i class="ri-twitter-fill"></i></a>
                                 <a href=""><i class="ri-facebook-fill"></i></a>
@@ -284,15 +264,14 @@ Nagar Seva
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="pic"><img
-                                src="{{ url_for('static', filename='assets/img/team/Tushar_Gupta_VIT.jpg') }}"
+                <div class="col-lg-6 mt-4">
+                    <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="pic"><img src="{{ url_for('static', filename='assets/img/team/vikas_kumar.png') }}"
                                 class="img-fluid" alt=""></div>
                         <div class="member-info">
                             <h4>Vikas Singh</h4>
                             <span>19BCE10117</span>
-                            <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
+                            <p>Android Developer</p>
                             <div class="social">
                                 <a href=""><i class="ri-twitter-fill"></i></a>
                                 <a href=""><i class="ri-facebook-fill"></i></a>
@@ -302,15 +281,31 @@ Nagar Seva
                         </div>
                     </div>
                 </div>
-
-                <div class="col-lg-6 mt-4 mt-lg-0">
-                    <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="pic"><img src="{{ url_for('static', filename='assets/img/team/team-2.jpg') }}"
+                <div class="col-lg-6 mt-4">
+                    <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="pic"><img src="{{ url_for('static', filename='assets/img/team/rahul_bhardwaj.png') }}"
+                                class="img-fluid" alt=""></div>
+                        <div class="member-info">
+                            <h4>Rahul Bhardawaj</h4>
+                            <span>19BAI10105</span>
+                            <p>Android Developer</p>
+                            <div class="social">
+                                <a href=""><i class="ri-twitter-fill"></i></a>
+                                <a href=""><i class="ri-facebook-fill"></i></a>
+                                <a href=""><i class="ri-instagram-fill"></i></a>
+                                <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-4">
+                    <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="pic"><img src="{{ url_for('static', filename='assets/img/team/yuvraj_shukla.png') }}"
                                 class="img-fluid" alt=""></div>
                         <div class="member-info">
                             <h4>Yuvraj Shukla</h4>
                             <span>19BCG10055</span>
-                            <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>
+                            <p>Graphic Designer</p>
                             <div class="social">
                                 <a href=""><i class="ri-twitter-fill"></i></a>
                                 <a href=""><i class="ri-facebook-fill"></i></a>
@@ -320,33 +315,31 @@ Nagar Seva
                         </div>
                     </div>
                 </div>
-
-                <div class="col-lg-6 mt-4">
-                    <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="300">
-                        <div class="pic"><img src="{{ url_for('static', filename='assets/img/team/team-3.jpg') }}"
-                                class="img-fluid" alt=""></div>
-                        <div class="member-info">
-                            <h4>Akshat</h4>
-                            <span>19BCE10</span>
-                            <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
-                            <div class="social">
-                                <a href=""><i class="ri-twitter-fill"></i></a>
-                                <a href=""><i class="ri-facebook-fill"></i></a>
-                                <a href=""><i class="ri-instagram-fill"></i></a>
-                                <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
                 <div class="col-lg-6 mt-4">
                     <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
-                        <div class="pic"><img src="{{ url_for('static', filename='assets/img/team/team-4.jpg') }}"
+                        <div class="pic"><img src="{{ url_for('static', filename='assets/img/team/akshat_kumar.png') }}"
+                                class="img-fluid" alt=""></div>
+                        <div class="member-info">
+                            <h4>Akshat Kumar</h4>
+                            <span>19BCE10397</span>
+                            <p>Front End Developer</p>
+                            <div class="social">
+                                <a href=""><i class="ri-twitter-fill"></i></a>
+                                <a href=""><i class="ri-facebook-fill"></i></a>
+                                <a href=""><i class="ri-instagram-fill"></i></a>
+                                <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-4">
+                    <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="pic"><img src="{{ url_for('static', filename='assets/img/team/priyam_khandelwal.png') }}"
                                 class="img-fluid" alt=""></div>
                         <div class="member-info">
                             <h4>Priyam Khandelwal</h4>
                             <span>19BCY10114</span>
-                            <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>
+                            <p>Back End Developer</p>
                             <div class="social">
                                 <a href=""><i class="ri-twitter-fill"></i></a>
                                 <a href=""><i class="ri-facebook-fill"></i></a>
@@ -356,6 +349,7 @@ Nagar Seva
                         </div>
                     </div>
                 </div>
+
 
             </div>
 

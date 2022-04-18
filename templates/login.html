@@ -1,68 +1,108 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
 
-{% block title %}
-    Employee
-{% endblock %}
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Vendor CSS Files -->
+  <link href="{{ url_for('static', filename='assets/vendor/aos/aos.css' )}}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/bootstrap/css/bootstrap.min.css' )}}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/bootstrap-icons/bootstrap-icons.css' )}}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/boxicons/css/boxicons.min.css' )}}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/glightbox/css/glightbox.min.css' )}}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/remixicon/remixicon.css' )}}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.css' )}}" rel="stylesheet">
 
-{% block content %}
-  <section class="container">
-    <form method="post">
-      {{ form.hidden_tag() }}
-      <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Email address</label>
-        <input type="email" name="email_address" class="form-control"  placeholder="Enter Email Address">
-        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-      </div>
-      <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Password</label>
-        <input type="password" name="password" class="form-control"  placeholder="Enter Password">
-      </div>
-      <button type="submit" class="btn btn-primary">Log In</button>
-    </form>
-  </section>  
+  <title>Employee Login</title>
+  <style>
+    .gradient-custom-2 {
+      /* fallback for old browsers */
+      background: #6ad25f;
 
-  <section class="vh-100" style="background: #31a9e1;">
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: rgb(2,0,36);
+      background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(106,210,95,1) 0%, rgba(0,212,255,1) 100%);
+
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      background: rgb(2,0,36);
+      background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(106,210,95,1) 0%, rgba(0,212,255,1) 100%);
+    }
+
+    @media (min-width: 768px) {
+      .gradient-form {
+        height: 100vh !important;
+      }
+    }
+
+    @media (min-width: 769px) {
+      .gradient-custom-2 {
+        border-top-right-radius: .3rem;
+        border-bottom-right-radius: .3rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+          {% for category,message in messages %}
+            <div class="alert alert-{{category}} alert-dismissible fade show" role="alert">
+              <strong>{{ message }}</strong>
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+          {% endfor %}
+      {% endif %}
+  {% endwith %}
+
+  <!-- <div class="container"> -->
+  <section class="h-100 gradient-form"  style="background-color: #6ad25f;">
     <div class="container py-5 h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
-        <div class="col col-xl-10">
-          <div class="card" style="border-radius: 1rem;">
+        <div class="col-xl-10">
+          <div class="card rounded-3 text-black">
             <div class="row g-0">
-              <div class="col-md-6 col-lg-5 d-none d-md-block">
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/img1.webp"
-                  alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" />
-              </div>
-              <div class="col-md-6 col-lg-7 d-flex align-items-center">
-                <div class="card-body p-4 p-lg-5 text-black">
-  
+              <div class="col-lg-6">
+                <div class="card-body p-md-5 mx-md-4">
+
+                  <div class="text-center">
+                    <!-- <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
+                      style="width: 185px;" alt="logo"> -->
+                    <h4 class="mt-1 mb-5 pb-1">We are The Lotus Team</h4>
+                  </div>
+
                   <form method="post">
                     {{ form.hidden_tag() }}
-  
-                    <div class="d-flex align-items-center mb-3 pb-1">
-                      <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
-                      <span class="h1 fw-bold mb-0">Employee Login Portal</span>
-                    </div>
-  
-                    <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your account</h5>
-  
+                    <p>Please login to your account</p>
+
                     <div class="form-outline mb-4">
-                      <input type="email" name="email_address" class="form-control form-control-lg" placeholder="Enter Email Address" />
-                      <label class="form-label" for="form2Example17">Email address</label>
+                      <label class="form-label" for="form2Example11">Username</label>
+                      <input type="email" name="email_address" id="form2Example11" class="form-control"
+                        placeholder="Phone number or email address" />
                     </div>
-  
+
                     <div class="form-outline mb-4">
-                      <input type="password" name="password" class="form-control form-control-lg" placeholder="Enter Password" />
-                      <label class="form-label" for="form2Example27">Password</label>
+                      <label class="form-label" for="form2Example22">Password</label>
+                      <input type="password" id="form2Example22" name="password" class="form-control" />
                     </div>
-  
-                    <div class="pt-1 mb-4">
-                      <button type="submit" class="btn btn-dark btn-lg btn-block" type="button">Login</button>
-                    </div>
-  
-                    <a class="small text-muted" href="#!">Forgot password?</a>
-                    <a href="#!" class="small text-muted">Terms of use.</a>
-                    <a href="#!" class="small text-muted">Privacy policy</a>
+
+                    <div class="text-center pt-1 mb-5 pb-1">
+                      <button class="btn btn-primary btn-block fa-lg mb-3" type="submit">Log
+                        in</button>
+                      </div>
+                      <a class="text-muted" href="#!">Forgot password?</a>
+
                   </form>
-  
+
+                </div>
+              </div>
+              <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+                <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                  <h1 class="logo me-auto"><a href="{{ url_for('home_page') }}">Nagar Seva</a></h1>
+                  <p class="small mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 </div>
               </div>
             </div>
@@ -71,5 +111,23 @@
       </div>
     </div>
   </section>
+<!-- </div> -->
 
-{% endblock %}
+<div id="preloader"></div>
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="{{ url_for('static', filename='assets/vendor/aos/aos.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/vendor/glightbox/js/glightbox.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/vendor/waypoints/noframework.waypoints.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/vendor/php-email-form/validate.js') }}"></script>
+
+<!-- Template Main JS File -->
+<script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+
+</body>
+
+</html>
