@@ -18,9 +18,7 @@ Public Complaints
                     <h1>Public Complaint View</h1>
                     <h2>Engineering Project In Community Service​</h2>
                     <div class="d-flex justify-content-center justify-content-lg-start">
-                        <a href="#about" class="btn-get-started scrollto">Get Started</a>
-                        <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox btn-watch-video"><i
-                                class="bi bi-play-circle"></i><span>Watch Video</span></a>
+                        <a href="#complain" class="btn-get-started scrollto">Complaints</a>
                     </div>
                 </div>
                 <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
@@ -32,6 +30,31 @@ Public Complaints
 
     </section>
     <!-- End Hero -->
+
+    <section id="quotes" style="font-weight: bolder;">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner text-center" style="font-size: large;">
+              <div class="carousel-item active">
+                <p>"I will not let anyone walk through my mind with their dirty feet." ~ Mahatma Gandhi</p>
+              </div>
+              <div class="carousel-item">
+                <p>"Mahatma Gandhi never compromised on cleanliness. He gave us freedom. We should give him a clean India." ~ Narendra Modi</p>
+              </div>
+              <div class="carousel-item">
+                <p>"Cleanliness is the Hallmark of perfect standards and the best quality inspector is the conscience" ~ J. R. D. Tata</p>
+              </div>
+              <div class="carousel-item">
+                <p>"Better keep yourself clean and bright; you are the window through which you must see the world." ~ George Bernard Shaw</p>
+              </div>
+              <div class="carousel-item">
+                <p>"Cleanliness is a state of purity, clarity, and precision" ~ Suze Orman</p>
+              </div>
+              <div class="carousel-item">
+                <p>"Cleanliness and order are not matters of instinct; they are matters of education, and like most great things, you must cultivate a taste for them." ~ Benjamin Disraeli</p>
+              </div>
+            </div>
+          </div>
+    </section>
 
     <!-- ======= About Us Section ======= -->
     <section id="about" class="about">
@@ -48,241 +71,9 @@ Public Complaints
     <!-- End About Us Section -->
     
     
-    <div class="container">
+    <div class="container" id="complain">
         <div class="row row-cols-1 row-cols-md-4 g-4">
             {% for data in db.child("user_complaint").child().get(): %}
-            <div class="col">
-                <div class="card h-100" style="width: 260px;">
-                    <img src="{{data.val().get('image')}}" class="card-img-top" style="width: 250px; height: 220px;">
-                    <div class="card-body">
-                        
-                        <h6 class="row">
-                            <div class="col card-title">
-                                {{data.val().get('name')}}
-                            </div>
-                            <div class="col text-left card-title">
-                                {{data.val().get('date')}}
-                            </div>
-                          </h6>
-                        <p class="card-text text-center">{{data.val().get('address')}}</p>
-                        <p class="card-text text-center">{{data.val().get('pincode')}}</p>
-                        
-                        <div class="card-footer text-center">
-                            {% if data.val().get('status') == "Unresolved" %}
-                                <span style="color: red;">{{data.val().get('status')}}<span>
-                            {% elif data.val().get('status') == "In Progress" %}
-                                <span style="color:blue">{{data.val().get('status')}}<span>
-                            {% else %}
-                                <span style="color:green">{{data.val().get('status')}}<span>
-                            {% endif %}
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100" style="width: 260px;">
-                    <img src="{{data.val().get('image')}}" class="card-img-top" style="width: 250px; height: 220px;">
-                    <div class="card-body">
-                        
-                        <h6 class="row">
-                            <div class="col card-title">
-                                {{data.val().get('name')}}
-                            </div>
-                            <div class="col text-left card-title">
-                                {{data.val().get('date')}}
-                            </div>
-                          </h6>
-                        <p class="card-text text-center">{{data.val().get('address')}}</p>
-                        <p class="card-text text-center">{{data.val().get('pincode')}}</p>
-                        
-                        <div class="card-footer text-center">
-                            {% if data.val().get('status') == "Unresolved" %}
-                                <span style="color: red;">{{data.val().get('status')}}<span>
-                            {% elif data.val().get('status') == "In Progress" %}
-                                <span style="color:blue">{{data.val().get('status')}}<span>
-                            {% else %}
-                                <span style="color:green">{{data.val().get('status')}}<span>
-                            {% endif %}
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100" style="width: 260px;">
-                    <img src="{{data.val().get('image')}}" class="card-img-top" style="width: 250px; height: 220px;">
-                    <div class="card-body">
-                        
-                        <h6 class="row">
-                            <div class="col card-title">
-                                {{data.val().get('name')}}
-                            </div>
-                            <div class="col text-left card-title">
-                                {{data.val().get('date')}}
-                            </div>
-                          </h6>
-                        <p class="card-text text-center">{{data.val().get('address')}}</p>
-                        <p class="card-text text-center">{{data.val().get('pincode')}}</p>
-                        
-                        <div class="card-footer text-center">
-                            {% if data.val().get('status') == "Unresolved" %}
-                                <span style="color: red;">{{data.val().get('status')}}<span>
-                            {% elif data.val().get('status') == "In Progress" %}
-                                <span style="color:blue">{{data.val().get('status')}}<span>
-                            {% else %}
-                                <span style="color:green">{{data.val().get('status')}}<span>
-                            {% endif %}
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100" style="width: 260px;">
-                    <img src="{{data.val().get('image')}}" class="card-img-top" style="width: 250px; height: 220px;">
-                    <div class="card-body">
-                        
-                        <h6 class="row">
-                            <div class="col card-title">
-                                {{data.val().get('name')}}
-                            </div>
-                            <div class="col text-left card-title">
-                                {{data.val().get('date')}}
-                            </div>
-                          </h6>
-                        <p class="card-text text-center">{{data.val().get('address')}}</p>
-                        <p class="card-text text-center">{{data.val().get('pincode')}}</p>
-                        
-                        <div class="card-footer text-center">
-                            {% if data.val().get('status') == "Unresolved" %}
-                                <span style="color: red;">{{data.val().get('status')}}<span>
-                            {% elif data.val().get('status') == "In Progress" %}
-                                <span style="color:blue">{{data.val().get('status')}}<span>
-                            {% else %}
-                                <span style="color:green">{{data.val().get('status')}}<span>
-                            {% endif %}
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100" style="width: 260px;">
-                    <img src="{{data.val().get('image')}}" class="card-img-top" style="width: 250px; height: 220px;">
-                    <div class="card-body">
-                        
-                        <h6 class="row">
-                            <div class="col card-title">
-                                {{data.val().get('name')}}
-                            </div>
-                            <div class="col text-left card-title">
-                                {{data.val().get('date')}}
-                            </div>
-                          </h6>
-                        <p class="card-text text-center">{{data.val().get('address')}}</p>
-                        <p class="card-text text-center">{{data.val().get('pincode')}}</p>
-                        
-                        <div class="card-footer text-center">
-                            {% if data.val().get('status') == "Unresolved" %}
-                                <span style="color: red;">{{data.val().get('status')}}<span>
-                            {% elif data.val().get('status') == "In Progress" %}
-                                <span style="color:blue">{{data.val().get('status')}}<span>
-                            {% else %}
-                                <span style="color:green">{{data.val().get('status')}}<span>
-                            {% endif %}
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100" style="width: 260px;">
-                    <img src="{{data.val().get('image')}}" class="card-img-top" style="width: 250px; height: 220px;">
-                    <div class="card-body">
-                        
-                        <h6 class="row">
-                            <div class="col card-title">
-                                {{data.val().get('name')}}
-                            </div>
-                            <div class="col text-left card-title">
-                                {{data.val().get('date')}}
-                            </div>
-                          </h6>
-                        <p class="card-text text-center">{{data.val().get('address')}}</p>
-                        <p class="card-text text-center">{{data.val().get('pincode')}}</p>
-                        
-                        <div class="card-footer text-center">
-                            {% if data.val().get('status') == "Unresolved" %}
-                                <span style="color: red;">{{data.val().get('status')}}<span>
-                            {% elif data.val().get('status') == "In Progress" %}
-                                <span style="color:blue">{{data.val().get('status')}}<span>
-                            {% else %}
-                                <span style="color:green">{{data.val().get('status')}}<span>
-                            {% endif %}
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100" style="width: 260px;">
-                    <img src="{{data.val().get('image')}}" class="card-img-top" style="width: 250px; height: 220px;">
-                    <div class="card-body">
-                        
-                        <h6 class="row">
-                            <div class="col card-title">
-                                {{data.val().get('name')}}
-                            </div>
-                            <div class="col text-left card-title">
-                                {{data.val().get('date')}}
-                            </div>
-                          </h6>
-                        <p class="card-text text-center">{{data.val().get('address')}}</p>
-                        <p class="card-text text-center">{{data.val().get('pincode')}}</p>
-                        
-                        <div class="card-footer text-center">
-                            {% if data.val().get('status') == "Unresolved" %}
-                                <span style="color: red;">{{data.val().get('status')}}<span>
-                            {% elif data.val().get('status') == "In Progress" %}
-                                <span style="color:blue">{{data.val().get('status')}}<span>
-                            {% else %}
-                                <span style="color:green">{{data.val().get('status')}}<span>
-                            {% endif %}
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100" style="width: 260px;">
-                    <img src="{{data.val().get('image')}}" class="card-img-top" style="width: 250px; height: 220px;">
-                    <div class="card-body">
-                        
-                        <h6 class="row">
-                            <div class="col card-title">
-                                {{data.val().get('name')}}
-                            </div>
-                            <div class="col text-left card-title">
-                                {{data.val().get('date')}}
-                            </div>
-                          </h6>
-                        <p class="card-text text-center">{{data.val().get('address')}}</p>
-                        <p class="card-text text-center">{{data.val().get('pincode')}}</p>
-                        
-                        <div class="card-footer text-center">
-                            {% if data.val().get('status') == "Unresolved" %}
-                                <span style="color: red;">{{data.val().get('status')}}<span>
-                            {% elif data.val().get('status') == "In Progress" %}
-                                <span style="color:blue">{{data.val().get('status')}}<span>
-                            {% else %}
-                                <span style="color:green">{{data.val().get('status')}}<span>
-                            {% endif %}
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="col">
                 <div class="card h-100" style="width: 260px;">
                     <img src="{{data.val().get('image')}}" class="card-img-top" style="width: 250px; height: 220px;">

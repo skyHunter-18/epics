@@ -14,8 +14,8 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="{{ url_for('static', filename='assets/img/favicon.png' )}}" rel="icon">
-  <link href="{{ url_for('static', filename='assets/img/apple-touch-icon.png' )}}" rel="apple-touch-icon">
+  <link href="{{ url_for('static', filename='assets/img/favicon_io/favicon-32x32.png' )}}" rel="icon">
+  <link href="{{ url_for('static', filename='assets/img/favicon_io/apple-touch-icon.png' )}}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -91,26 +91,12 @@
   <!-- ======= Footer ======= -->
   <footer id="footer">
 
-    <!-- <div class="footer-newsletter">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-6">
-            <h4>Join Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
     <div class="footer-top">
       <div class="container">
         <div class="row">
 
           <div class="col-lg-2 col-md-6 footer-contact">
-            <img src="{{ url_for('static', filename='assets/img/nagar_seva_icon.png') }}" width="70%" height="50%" alt="" srcset="">
+            <a href="{{ url_for('home_page') }}"><img src="{{ url_for('static', filename='assets/img/nagar_seva_icon.png') }}" width="70%" height="50%" alt="" srcset=""></a>
           </div>
           <div class="col-lg-4 col-md-6 footer-contact">
             <h3>Nagar Seva</h3>
@@ -119,8 +105,7 @@
               Bhopal-Indore Highway<br>
               Kothrikalan, Sehore<br>
               Madhya Pradesh – 466114<br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
+              <strong>Email:</strong> info@nagar-seva.com<br>
             </p>
           </div>
 
@@ -135,26 +120,16 @@
             </ul>
           </div>
 
-          <!-- <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-            </ul>
-          </div> -->
-
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Social Networks</h4>
-            <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+            <h4>Our Github</h4>
+            <p>The following are the links to the github repository of our project.</p>
             <div class="social-links mt-3">
-              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              <div class="d-flex justify-content-center justify-content-lg-start row">
+                <a href="https://github.com/vikashsngh43/Nagar-Seva"  target="_blank"  class="btn-get-started col text-center" style="margin-right: 10px;">Android App</a>
+                <a href="https://github.com/skyHunter-18/nagar_seva"  target="_blank"  class="btn-get-started col text-center">Website</a>
+              </div>
+              <div class="d-flex justify-content-center justify-content-lg-start">
+              </div>
             </div>
           </div>
 

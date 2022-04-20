@@ -5,6 +5,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link href="{{ url_for('static', filename='assets/img/favicon_io/favicon-32x32.png' )}}" rel="icon">
+  <link href="{{ url_for('static', filename='assets/img/favicon_io/apple-touch-icon.png' )}}" rel="apple-touch-icon">
   <!-- Vendor CSS Files -->
   <link href="{{ url_for('static', filename='assets/vendor/aos/aos.css' )}}" rel="stylesheet">
   <link href="{{ url_for('static', filename='assets/vendor/bootstrap/css/bootstrap.min.css' )}}" rel="stylesheet">
@@ -69,7 +72,7 @@
                   <div class="text-center">
                     <!-- <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
                       style="width: 185px;" alt="logo"> -->
-                    <h4 class="mt-1 mb-5 pb-1">We are The Lotus Team</h4>
+                    <h4 class="mt-1 mb-5 pb-1">We are The Nagar Seva Team</h4>
                   </div>
 
                   <form method="post">
@@ -79,17 +82,18 @@
                     <div class="form-outline mb-4">
                       <label class="form-label" for="form2Example11">Username</label>
                       <input type="email" name="email_address" id="form2Example11" class="form-control"
-                        placeholder="Phone number or email address" />
+                        placeholder="Enter Email address" />
                     </div>
 
                     <div class="form-outline mb-4">
                       <label class="form-label" for="form2Example22">Password</label>
-                      <input type="password" id="form2Example22" name="password" class="form-control" />
+                      <input type="password" id="form2Example22" name="password" class="form-control" placeholder="Enter Password" />
                     </div>
 
                     <div class="text-center pt-1 mb-5 pb-1">
                       <button class="btn btn-primary btn-block fa-lg mb-3" type="submit">Log
                         in</button>
+                      <a class="btn btn-primary btn-block fa-lg mb-3" href="{{ url_for('home_page') }}" type="button">Back To Home Page</a>
                       </div>
                       <a class="text-muted" href="#!">Forgot password?</a>
 
@@ -97,13 +101,15 @@
 
                 </div>
               </div>
-              <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
-                <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+              <div class="col-lg-6 d-flex align-items-center gradient-custom-2 center">
+                <!-- <div class="text-white px-3 py-4 p-md-5 mx-md-4">
                   <h1 class="logo me-auto"><a href="{{ url_for('home_page') }}">Nagar Seva</a></h1>
                   <p class="small mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
                     exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </div>
+                </div> -->
+                <img src="{{ url_for('static', filename='assets/img/garbage-men.png') }}" width="90%" height="90%"
+                        alt="">
               </div>
             </div>
           </div>
@@ -114,7 +120,7 @@
 <!-- </div> -->
 
 <div id="preloader"></div>
-<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<!-- <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a> -->
 
 <!-- Vendor JS Files -->
 <script src="{{ url_for('static', filename='assets/vendor/aos/aos.js') }}"></script>

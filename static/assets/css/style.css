@@ -1532,7 +1532,7 @@ section {
   text-decoration: none;
   color: #47b2e4;
 }
-#footer .footer-top .social-links a {
+/* #footer .footer-top .social-links a {
   font-size: 18px;
   display: inline-block;
   background: #47b2e4;
@@ -1550,6 +1550,22 @@ section {
   background: #209dd8;
   color: #fff;
   text-decoration: none;
+} */
+#footer .btn-get-started {
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 28px 11px 28px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 10px 0 0 0;
+  color: #fff;
+  background: #47b2e4;
+}
+#footer .btn-get-started:hover {
+  background: #209dd8;
 }
 #footer .footer-bottom {
   padding-top: 30px;

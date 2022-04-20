@@ -12,11 +12,13 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="{{ url_for('static', filename='assets/img/favicon.png' )}}" rel="icon">
-  <link href="{{ url_for('static', filename='assets/img/apple-touch-icon.png' )}}" rel="apple-touch-icon">
+  <link href="{{ url_for('static', filename='assets/img/favicon_io/favicon-32x32.png' )}}" rel="icon">
+  <link href="{{ url_for('static', filename='assets/img/favicon_io/apple-touch-icon.png' )}}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="{{ url_for('static', filename='assets/vendor/aos/aos.css' )}}" rel="stylesheet">
@@ -39,7 +41,7 @@
 </head>
 
 <body>
-    <!-- ======= Header ======= -->
+  <!-- ======= Header ======= -->
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
 
@@ -48,19 +50,19 @@
       <!-- <a href="base.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav id="navbar" class="navbar">
-        <ul >
+        <ul>
           <li><a class="nav-link scrollto" href="{{ url_for('home_page') }}">Home</a></li>
           <li><a class="nav-link scrollto" href="home#about">About Us</a></li>
           <li><a class="nav-link scrollto" href="home#team">Team</a></li>
           <!-- <li><a class="nav-link scrollto" href="home#team">tester</a></li> -->
           {% if logger != None: %}
-            <li><a class="getstarted" href="{{ url_for('logout_page') }}">Logout</a></li>
+          <li><a class="getstarted" href="{{ url_for('logout_page') }}">Logout</a></li>
           {% else: %}
           <li><a class="getstarted active" href="{{ url_for('public_complaint_page') }}">Complaints</a></li>
-            <li><a class="getstarted" href="{{ url_for('login_page') }}">Employee Login</a></li>
+          <li><a class="getstarted" href="{{ url_for('login_page') }}">Employee Login</a></li>
           {% endif %}
-          
-          
+
+
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
@@ -68,174 +70,165 @@
     </div>
     <div class="container">
       {% with messages = get_flashed_messages(with_categories=true) %}
-        {% if messages %}
-            {% for category,message in messages %}
-                <div class="alert alert-{{category}}">
-                    <button type="button" class="m1-2 mb-1 close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    {{ message }}
-                </div>
-            {% endfor %}
-        {% endif %}
-    {% endwith %}
+      {% if messages %}
+      {% for category,message in messages %}
+      <div class="alert alert-{{category}}">
+        <button type="button" class="m1-2 mb-1 close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        {{ message }}
+      </div>
+      {% endfor %}
+      {% endif %}
+      {% endwith %}
     </div>
   </header><!-- End Header -->
-<section>
+  <section>
 
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="d-flex align-items-center">
 
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1"
-                    data-aos="fade-up" data-aos-delay="200">
-                    <!-- <h1>Nagar Seva Platform</h1> -->
-                    <h1>Employee Control Portal</h1>
-                    <h2>Engineering Project In Community Service​</h2>
-                    <div class="d-flex justify-content-center justify-content-lg-start">
-                        <a href="#about" class="btn-get-started scrollto">Get Started</a>
-                        <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox btn-watch-video"><i
-                                class="bi bi-play-circle"></i><span>Watch Video</span></a>
-                    </div>
-                </div>
-                <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="{{ url_for('static', filename='assets/img/young-people-cleaning-garbage-removebg.png') }}"
-                        class="img-fluid animated" alt="">
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1"
+            data-aos="fade-up" data-aos-delay="200">
+            <!-- <h1>Nagar Seva Platform</h1> -->
+            <h1>Employee Control Portal</h1>
+            <h2>Engineering Project In Community Service</h2>
+            <div class="d-flex justify-content-center justify-content-lg-start">
+              <a href="#complain" class="btn-get-started scrollto">Complaints</a>
             </div>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+            <img src="{{ url_for('static', filename='assets/img/young-people-cleaning-garbage-removebg.png') }}"
+              class="img-fluid animated">
+          </div>
         </div>
+      </div>
 
     </section>
     <!-- End Hero -->
 
-    <!-- ======= About Us Section ======= -->
-    <section id="about" class="about">
-        <div class="container" data-aos="fade-up">
-
-            <div class="section-title">
-                <h2>Complaints</h2>
-            </div>
-
-            <div class="row content">
-                <div class="col-lg-6">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore
-                        magna aliqua.
-                    </p>
-                    <ul>
-                        <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat
-                        </li>
-                        <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate
-                            velit</li>
-                        <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-lg-6 pt-4 pt-lg-0">
-                    <p>
-                        Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-                        in voluptate
-                        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in
-                        culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                    <a href="#" class="btn-learn-more">Learn More</a>
-                </div>
-            </div>
-
-        </div>
-    </section>
-    <!-- End About Us Section -->
-    <style>
-        /* This was used to add numbering in the tables */
-        table {
-            width: 50%;
-            counter-reset: row-num-1;
-        }
-
-        table tr {
-            counter-increment: row-num;
-        }
-
-        table tr td:first-child::before {
-            content: counter(row-num) ". ";
-        }
-    </style>
-    <div class="container">
-        <table border="0" class="table table-hover container">
-            <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Mobile</th>
-                    <th scope="col">Date</th>
-                    <th scope="col">Address</th>
-                    <th scope="col">Pincode</th>
-                    <th scope="col">Image Link</th>
-                    <th scope="col">Status</th>
-                    <th scope="col">Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for data in db.child("user_complaint").child().get(): %}
-                <tr>
-                    <td></td>
-                    <td>{{data.val().get('name')}}</td>
-                    <td>{{data.val().get('mobile')}}</td>
-                    <td>{{data.val().get('date')}}</td>
-                    <td>{{data.val().get('address')}}</td>
-                    <td>{{data.val().get('pincode')}}</td>
-                    <td>
-                        <a href="{{data.val().get('image')}}" target="_blank" rel="noopener noreferrer" class="primary">View Image</a>
-                    </td>
-                    <td>
-                        {% if data.val().get('status') == "Unresolved" %}
-                            <p style="color: red;">{{data.val().get('status')}}</p>
-                        {% elif data.val().get('status') == "In Progress" %}
-                            <p style="color:blue">{{data.val().get('status')}}</p>
-                        {% elif data.val().get('status') == "Resolved" %}
-                            <p style="color:green">{{data.val().get('status')}}</p>
-                        {% else %}
-                            <p style="color:yellow">{{data.val().get('status')}}</p>
-                        {% endif %}
-                    </td>
-                    <td><form method="post">
-                        <input type="text" name="update_status">
-                        <input type="hidden" name="mob" value="{{data.val().get('mobile')}}">
-                        <button class="btn btn-primary" type="submit">Update status</button>
-                    </form>
-                    </td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </div>
-</section>
-<!-- ======= Footer ======= -->
-<footer id="footer">
-
-    <!-- <div class="footer-newsletter">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-6">
-            <h4>Join Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
+    <section id="quotes" style="font-weight: bolder;">
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner text-center" style="font-size: large;">
+          <div class="carousel-item active">
+            <p>"I will not let anyone walk through my mind with their dirty feet." ~ Mahatma Gandhi</p>
+          </div>
+          <div class="carousel-item">
+            <p>"Mahatma Gandhi never compromised on cleanliness. He gave us freedom. We should give him a clean India."
+              ~ Narendra Modi</p>
+          </div>
+          <div class="carousel-item">
+            <p>"Cleanliness is the Hallmark of perfect standards and the best quality inspector is the conscience" ~ J.
+              R. D. Tata</p>
+          </div>
+          <div class="carousel-item">
+            <p>"Better keep yourself clean and bright; you are the window through which you must see the world." ~
+              George Bernard Shaw</p>
+          </div>
+          <div class="carousel-item">
+            <p>"Cleanliness is a state of purity, clarity, and precision" ~ Suze Orman</p>
+          </div>
+          <div class="carousel-item">
+            <p>"Cleanliness and order are not matters of instinct; they are matters of education, and like most great
+              things, you must cultivate a taste for them." ~ Benjamin Disraeli</p>
           </div>
         </div>
       </div>
-    </div> -->
+    </section>
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Complaints</h2>
+        </div>
+
+      </div>
+    </section>
+    <!-- End About Us Section -->
+    <style>
+      /* This was used to add numbering in the tables */
+      table {
+        width: 50%;
+        counter-reset: row-num-1;
+      }
+
+      table tr {
+        counter-increment: row-num;
+      }
+
+      table tr td:first-child::before {
+        content: counter(row-num) ". ";
+      }
+    </style>
+    <div class="container" id="complain">
+      <table border="0" class="table table-hover container">
+        <thead>
+          <tr>
+            <th scope="col" class="text-center">#</th>
+            <th scope="col" class="text-center">Name</th>
+            <th scope="col" class="text-center">Mobile</th>
+            <th scope="col" class="text-center">Date</th>
+            <th scope="col" class="text-center">Address</th>
+            <th scope="col" class="text-center">Pincode</th>
+            <th scope="col" class="text-center">Image Link</th>
+            <th scope="col" class="text-center">Status</th>
+            <th scope="col" class="text-center">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for data in db.child("user_complaint").child().get(): %}
+          <tr>
+            <td></td>
+            <td>{{data.val().get('name')}}</td>
+            <td>{{data.val().get('mobile')}}</td>
+            <td>{{data.val().get('date')}}</td>
+            <td>{{data.val().get('address')}}</td>
+            <td>{{data.val().get('pincode')}}</td>
+            <td>
+              <a href="{{data.val().get('image')}}" target="_blank" rel="noopener noreferrer" class="primary">View
+                Image</a>
+            </td>
+            <td>
+              {% if data.val().get('status') == "Unresolved" %}
+              <p style="color: red;">{{data.val().get('status')}}</p>
+              {% elif data.val().get('status') == "In Progress" %}
+              <p style="color:blue">{{data.val().get('status')}}</p>
+              {% elif data.val().get('status') == "Resolved" %}
+              <p style="color:green">{{data.val().get('status')}}</p>
+              {% else %}
+              <p>{{data.val().get('status')}}</p>
+              {% endif %}
+            </td>
+            <td>
+              <form method="post" class="container">
+                <div class="input-group ">
+                  <input type="text" name="update_status" class="form-control">
+                  <input type="hidden" name="mob" value="{{data.val().get('mobile')}}">
+                  <button class="btn btn-outline-secondary" type="submit">Update status</button>
+                </div>
+              </form>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
 
     <div class="footer-top">
       <div class="container">
         <div class="row">
 
           <div class="col-lg-2 col-md-6 footer-contact">
-            <img src="{{ url_for('static', filename='assets/img/nagar_seva_icon.png') }}" width="70%" height="50%" alt="" srcset="">
+            <a href="{{ url_for('home_page') }}"><img src="{{ url_for('static', filename='assets/img/nagar_seva_icon.png') }}" width="70%" height="50%" alt="" srcset=""></a>
+            
           </div>
           <div class="col-lg-4 col-md-6 footer-contact">
             <h3>Nagar Seva</h3>
@@ -244,8 +237,7 @@
               Bhopal-Indore Highway<br>
               Kothrikalan, Sehore<br>
               Madhya Pradesh – 466114<br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
+              <strong>Email:</strong> info@nagar-seva.com<br>
             </p>
           </div>
 
@@ -260,26 +252,16 @@
             </ul>
           </div>
 
-          <!-- <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-            </ul>
-          </div> -->
-
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Social Networks</h4>
-            <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+            <h4>Our Github</h4>
+            <p>The following are the links to the github repository of our project.</p>
             <div class="social-links mt-3">
-              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              <div class="d-flex justify-content-center justify-content-lg-start row">
+                <a href="https://github.com/vikashsngh43/Nagar-Seva"  target="_blank"  class="btn-get-started col text-center" style="margin-right: 10px;">Android App</a>
+                <a href="https://github.com/skyHunter-18/nagar_seva"  target="_blank"  class="btn-get-started col text-center">Website</a>
+              </div>
+              <div class="d-flex justify-content-center justify-content-lg-start">
+              </div>
             </div>
           </div>
 
@@ -291,7 +273,8 @@
   <!-- End Footer -->
 
   <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="{{ url_for('static', filename='assets/vendor/aos/aos.js') }}"></script>
